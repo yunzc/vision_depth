@@ -1,7 +1,9 @@
 # vision_depth
 
 to make: 
-cmake .
+
+cmake . 
+
 make
 
 Usage: ./process_img "img1" "img2" "translation_x" "translation_z" "angle difference" 
