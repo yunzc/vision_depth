@@ -93,7 +93,7 @@ void find_intersection(Mat& v1, Mat& v2, Mat& t, double &depth){
 	Mat pt2 = alpha*v2; 
 	// cout << pt1 << " " << pt2 << endl; 
 	// for now only extract depth (Z) note this is relative, to get exact need calibration 
-	depth = (pt1.at<double>(2,0) + pt2.at<double>(2,0))/2; 
+	depth = (pt1.at<double>(2,0) + pt2.at<double>(2,0))/2;  
 }
 
 void depths2colors(vector<double> depths, vector<uchar> &colors){
@@ -107,17 +107,15 @@ void depths2colors(vector<double> depths, vector<uchar> &colors){
 			min = depths[i];
 		}
 	}
-	double range = max - min; 
-	cout << "depth range: " << range; 
+	double range = max/25 - min/25; 
+	cout << "depth range: " << range << "min: " << min; 
 	for (int i = 0; i < depths.size(); i ++){
-		double intensity = (depths[i] - min)/range*255; 
+		double intensity = (depths[i] - min/50)/range*255; 
 		colors.push_back((uchar)intensity); 
 	}
 }
 
-void visualize_depth(Mat& out, vector<Point> d_pts, vector<double> depths){
-	vector<uchar> colors;
-    depths2colors(depths, colors);
+void visualize(Mat& out, vector<Point> d_pts, vector<uchar> colors){
     for (int i = 0; i < colors.size(); i++){
     	int r = d_pts[i].y; int c = d_pts[i].x;  
     	out.at<uchar>(r,c) = colors[i]; 
@@ -148,17 +146,18 @@ int main(int argc, char *argv[]){
   		Mat ptvect1, ptvect2;
   		physical_XYZ(Camera_Matrix, m[i].first, ptvect1);
   		physical_XYZ(Camera_Matrix, m[i].second, ptvect2); 
-  		cout << ptvect1 << " " << ptvect2 << endl;  
   		double d; 
   		find_intersection(ptvect1, ptvect2, T, d);
 		depths.push_back(d); 
 		depthPts.push_back(m[i].first); 
   	}
   	vector<vector<Point> > regs; 
+  	vector<uchar> colors;
+    depths2colors(depths, colors);
     namedWindow("original", WINDOW_NORMAL);
     imshow("original", img1);
     namedWindow("depth", WINDOW_NORMAL); 
-    visualize_depth(img1, depthPts, depths);
+    visualize(img1, depthPts, colors);
     imshow("depth", img1);   
     waitKey(0); 
 }

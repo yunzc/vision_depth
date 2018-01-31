@@ -14,7 +14,6 @@ make
 
 ## Running sift_img_depth (find depth of a few feature points)
 
-For  (depth of a few features): 
 ```
 ./sift_img_depth <img1> <img2> <translation_x> <translation_z> <angle difference>
 ```
@@ -25,6 +24,17 @@ With included images, to see example, run:
 Note that z is the depth direction (pointing towards scene). System is right handed and the transformation is from image 1 to image 2. 
 
 After running a code, two images should show up: one is the original image (in grayscale), the other is the original with the depth points marked, darker means object is closer to camera, whiter means further away. 
+
+## Running image_depth (return depth map a full image)
+
+```
+./image_depth <img1> <img2> <translation_x> <translation_z> <angle difference> 
+```
+With included images, try 
+```
+./image_depth images/dim1.jpg images/dim2.jpg 10 0 0
+```
+Note that here we are using the downsampled images, so have to downsample accordingly (see below) (using downsampled version other wise takes a long time to compute). You can see an example result at images/example_depth.jpg
 
 ## Note 
 
