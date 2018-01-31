@@ -48,9 +48,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/image_depth.dir/DependInfo.cmake"
   "CMakeFiles/image_segmentation.dir/DependInfo.cmake"
   "CMakeFiles/test_opencv.dir/DependInfo.cmake"
+  "CMakeFiles/surf_img_depth.dir/DependInfo.cmake"
   "CMakeFiles/feature_match.dir/DependInfo.cmake"
+  "CMakeFiles/downscale.dir/DependInfo.cmake"
+  "CMakeFiles/match_test.dir/DependInfo.cmake"
   "CMakeFiles/camera_calibration.dir/DependInfo.cmake"
-  "CMakeFiles/process_img.dir/DependInfo.cmake"
   )

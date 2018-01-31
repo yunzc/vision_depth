@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yun/vision/vision_slam
+CMAKE_SOURCE_DIR = /home/yun/vision/vision_depth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yun/vision/vision_slam
+CMAKE_BINARY_DIR = /home/yun/vision/vision_depth
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yun/vision/vision_slam/CMakeFiles /home/yun/vision/vision_slam/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yun/vision/vision_depth/CMakeFiles /home/yun/vision/vision_depth/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yun/vision/vision_slam/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yun/vision/vision_depth/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named image_depth
+
+# Build rule for target.
+image_depth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_depth
+.PHONY : image_depth
+
+# fast build rule for target.
+image_depth/fast:
+	$(MAKE) -f CMakeFiles/image_depth.dir/build.make CMakeFiles/image_depth.dir/build
+.PHONY : image_depth/fast
+
+#=============================================================================
 # Target rules for targets named image_segmentation
 
 # Build rule for target.
@@ -137,6 +150,19 @@ test_opencv/fast:
 .PHONY : test_opencv/fast
 
 #=============================================================================
+# Target rules for targets named surf_img_depth
+
+# Build rule for target.
+surf_img_depth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 surf_img_depth
+.PHONY : surf_img_depth
+
+# fast build rule for target.
+surf_img_depth/fast:
+	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/build
+.PHONY : surf_img_depth/fast
+
+#=============================================================================
 # Target rules for targets named feature_match
 
 # Build rule for target.
@@ -150,6 +176,32 @@ feature_match/fast:
 .PHONY : feature_match/fast
 
 #=============================================================================
+# Target rules for targets named downscale
+
+# Build rule for target.
+downscale: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 downscale
+.PHONY : downscale
+
+# fast build rule for target.
+downscale/fast:
+	$(MAKE) -f CMakeFiles/downscale.dir/build.make CMakeFiles/downscale.dir/build
+.PHONY : downscale/fast
+
+#=============================================================================
+# Target rules for targets named match_test
+
+# Build rule for target.
+match_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 match_test
+.PHONY : match_test
+
+# fast build rule for target.
+match_test/fast:
+	$(MAKE) -f CMakeFiles/match_test.dir/build.make CMakeFiles/match_test.dir/build
+.PHONY : match_test/fast
+
+#=============================================================================
 # Target rules for targets named camera_calibration
 
 # Build rule for target.
@@ -161,19 +213,6 @@ camera_calibration: cmake_check_build_system
 camera_calibration/fast:
 	$(MAKE) -f CMakeFiles/camera_calibration.dir/build.make CMakeFiles/camera_calibration.dir/build
 .PHONY : camera_calibration/fast
-
-#=============================================================================
-# Target rules for targets named process_img
-
-# Build rule for target.
-process_img: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 process_img
-.PHONY : process_img
-
-# fast build rule for target.
-process_img/fast:
-	$(MAKE) -f CMakeFiles/process_img.dir/build.make CMakeFiles/process_img.dir/build
-.PHONY : process_img/fast
 
 camera_calibration.o: camera_calibration.cpp.o
 
@@ -202,6 +241,33 @@ camera_calibration.cpp.s:
 	$(MAKE) -f CMakeFiles/camera_calibration.dir/build.make CMakeFiles/camera_calibration.dir/camera_calibration.cpp.s
 .PHONY : camera_calibration.cpp.s
 
+downscale.o: downscale.cpp.o
+
+.PHONY : downscale.o
+
+# target to build an object file
+downscale.cpp.o:
+	$(MAKE) -f CMakeFiles/downscale.dir/build.make CMakeFiles/downscale.dir/downscale.cpp.o
+.PHONY : downscale.cpp.o
+
+downscale.i: downscale.cpp.i
+
+.PHONY : downscale.i
+
+# target to preprocess a source file
+downscale.cpp.i:
+	$(MAKE) -f CMakeFiles/downscale.dir/build.make CMakeFiles/downscale.dir/downscale.cpp.i
+.PHONY : downscale.cpp.i
+
+downscale.s: downscale.cpp.s
+
+.PHONY : downscale.s
+
+# target to generate assembly for a file
+downscale.cpp.s:
+	$(MAKE) -f CMakeFiles/downscale.dir/build.make CMakeFiles/downscale.dir/downscale.cpp.s
+.PHONY : downscale.cpp.s
+
 feature_match.o: feature_match.cpp.o
 
 .PHONY : feature_match.o
@@ -228,6 +294,33 @@ feature_match.s: feature_match.cpp.s
 feature_match.cpp.s:
 	$(MAKE) -f CMakeFiles/feature_match.dir/build.make CMakeFiles/feature_match.dir/feature_match.cpp.s
 .PHONY : feature_match.cpp.s
+
+image_depth.o: image_depth.cpp.o
+
+.PHONY : image_depth.o
+
+# target to build an object file
+image_depth.cpp.o:
+	$(MAKE) -f CMakeFiles/image_depth.dir/build.make CMakeFiles/image_depth.dir/image_depth.cpp.o
+.PHONY : image_depth.cpp.o
+
+image_depth.i: image_depth.cpp.i
+
+.PHONY : image_depth.i
+
+# target to preprocess a source file
+image_depth.cpp.i:
+	$(MAKE) -f CMakeFiles/image_depth.dir/build.make CMakeFiles/image_depth.dir/image_depth.cpp.i
+.PHONY : image_depth.cpp.i
+
+image_depth.s: image_depth.cpp.s
+
+.PHONY : image_depth.s
+
+# target to generate assembly for a file
+image_depth.cpp.s:
+	$(MAKE) -f CMakeFiles/image_depth.dir/build.make CMakeFiles/image_depth.dir/image_depth.cpp.s
+.PHONY : image_depth.cpp.s
 
 image_segmentation.o: image_segmentation.cpp.o
 
@@ -256,32 +349,59 @@ image_segmentation.cpp.s:
 	$(MAKE) -f CMakeFiles/image_segmentation.dir/build.make CMakeFiles/image_segmentation.dir/image_segmentation.cpp.s
 .PHONY : image_segmentation.cpp.s
 
-process_img.o: process_img.cpp.o
+match_test.o: match_test.cpp.o
 
-.PHONY : process_img.o
+.PHONY : match_test.o
 
 # target to build an object file
-process_img.cpp.o:
-	$(MAKE) -f CMakeFiles/process_img.dir/build.make CMakeFiles/process_img.dir/process_img.cpp.o
-.PHONY : process_img.cpp.o
+match_test.cpp.o:
+	$(MAKE) -f CMakeFiles/match_test.dir/build.make CMakeFiles/match_test.dir/match_test.cpp.o
+.PHONY : match_test.cpp.o
 
-process_img.i: process_img.cpp.i
+match_test.i: match_test.cpp.i
 
-.PHONY : process_img.i
+.PHONY : match_test.i
 
 # target to preprocess a source file
-process_img.cpp.i:
-	$(MAKE) -f CMakeFiles/process_img.dir/build.make CMakeFiles/process_img.dir/process_img.cpp.i
-.PHONY : process_img.cpp.i
+match_test.cpp.i:
+	$(MAKE) -f CMakeFiles/match_test.dir/build.make CMakeFiles/match_test.dir/match_test.cpp.i
+.PHONY : match_test.cpp.i
 
-process_img.s: process_img.cpp.s
+match_test.s: match_test.cpp.s
 
-.PHONY : process_img.s
+.PHONY : match_test.s
 
 # target to generate assembly for a file
-process_img.cpp.s:
-	$(MAKE) -f CMakeFiles/process_img.dir/build.make CMakeFiles/process_img.dir/process_img.cpp.s
-.PHONY : process_img.cpp.s
+match_test.cpp.s:
+	$(MAKE) -f CMakeFiles/match_test.dir/build.make CMakeFiles/match_test.dir/match_test.cpp.s
+.PHONY : match_test.cpp.s
+
+surf_img_depth.o: surf_img_depth.cpp.o
+
+.PHONY : surf_img_depth.o
+
+# target to build an object file
+surf_img_depth.cpp.o:
+	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.o
+.PHONY : surf_img_depth.cpp.o
+
+surf_img_depth.i: surf_img_depth.cpp.i
+
+.PHONY : surf_img_depth.i
+
+# target to preprocess a source file
+surf_img_depth.cpp.i:
+	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.i
+.PHONY : surf_img_depth.cpp.i
+
+surf_img_depth.s: surf_img_depth.cpp.s
+
+.PHONY : surf_img_depth.s
+
+# target to generate assembly for a file
+surf_img_depth.cpp.s:
+	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.s
+.PHONY : surf_img_depth.cpp.s
 
 test_opencv.o: test_opencv.cpp.o
 
@@ -317,24 +437,36 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... image_depth"
 	@echo "... image_segmentation"
 	@echo "... test_opencv"
+	@echo "... surf_img_depth"
 	@echo "... feature_match"
+	@echo "... downscale"
+	@echo "... match_test"
 	@echo "... camera_calibration"
-	@echo "... rebuild_cache"
-	@echo "... process_img"
 	@echo "... camera_calibration.o"
 	@echo "... camera_calibration.i"
 	@echo "... camera_calibration.s"
+	@echo "... downscale.o"
+	@echo "... downscale.i"
+	@echo "... downscale.s"
 	@echo "... feature_match.o"
 	@echo "... feature_match.i"
 	@echo "... feature_match.s"
+	@echo "... image_depth.o"
+	@echo "... image_depth.i"
+	@echo "... image_depth.s"
 	@echo "... image_segmentation.o"
 	@echo "... image_segmentation.i"
 	@echo "... image_segmentation.s"
-	@echo "... process_img.o"
-	@echo "... process_img.i"
-	@echo "... process_img.s"
+	@echo "... match_test.o"
+	@echo "... match_test.i"
+	@echo "... match_test.s"
+	@echo "... surf_img_depth.o"
+	@echo "... surf_img_depth.i"
+	@echo "... surf_img_depth.s"
 	@echo "... test_opencv.o"
 	@echo "... test_opencv.i"
 	@echo "... test_opencv.s"

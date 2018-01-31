@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/yun/vision/vision_slam/test_opencv.cpp
+/home/yun/vision/vision_depth/test_opencv.cpp
 stdio.h
 -
 iostream
 -
 opencv2/core.hpp
-/home/yun/vision/vision_slam/opencv2/core.hpp
+/home/yun/vision/vision_depth/opencv2/core.hpp
 opencv2/features2d.hpp
-/home/yun/vision/vision_slam/opencv2/features2d.hpp
+/home/yun/vision/vision_depth/opencv2/features2d.hpp
 opencv2/xfeatures2d.hpp
-/home/yun/vision/vision_slam/opencv2/xfeatures2d.hpp
+/home/yun/vision/vision_depth/opencv2/xfeatures2d.hpp
 opencv2/highgui.hpp
-/home/yun/vision/vision_slam/opencv2/highgui.hpp
+/home/yun/vision/vision_depth/opencv2/highgui.hpp
 opencv2/imgcodecs.hpp
-/home/yun/vision/vision_slam/opencv2/imgcodecs.hpp
+/home/yun/vision/vision_depth/opencv2/imgcodecs.hpp
 
 /opt/ros/kinetic/include/opencv-3.3.1/opencv/cxcore.h
 opencv2/core/core_c.h

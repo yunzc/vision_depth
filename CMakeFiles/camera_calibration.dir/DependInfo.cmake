@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yun/vision/vision_slam/camera_calibration.cpp" "/home/yun/vision/vision_slam/CMakeFiles/camera_calibration.dir/camera_calibration.cpp.o"
+  "/home/yun/vision/vision_depth/camera_calibration.cpp" "/home/yun/vision/vision_depth/CMakeFiles/camera_calibration.dir/camera_calibration.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
