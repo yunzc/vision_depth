@@ -30,10 +30,9 @@ int get_cam_param(string filename, Mat& CM, Mat& DC){
 void find_features(Mat& image, vector<KeyPoint> &keypts, Mat& descriptors){
 	// Make sure image is black and white 
 	// cvtColor(src, bwsrc, cv::COLOR_RGB2GRAY);
-	int minHessian = 400; 
-	Ptr<SURF> detector = SURF::create(minHessian);
+	Ptr<SIFT> detector = SIFT::create();
 	detector -> detect( image, keypts ); //detect keypts  
-	Ptr<SURF> extractor = SURF::create(); 
+	Ptr<SIFT> extractor = SIFT::create(); 
 	extractor -> compute( image, keypts, descriptors ); 
 }
 

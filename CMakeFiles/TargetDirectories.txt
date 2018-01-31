@@ -3,8 +3,8 @@
 /home/yun/vision/vision_depth/CMakeFiles/image_depth.dir
 /home/yun/vision/vision_depth/CMakeFiles/image_segmentation.dir
 /home/yun/vision/vision_depth/CMakeFiles/test_opencv.dir
-/home/yun/vision/vision_depth/CMakeFiles/surf_img_depth.dir
 /home/yun/vision/vision_depth/CMakeFiles/feature_match.dir
+/home/yun/vision/vision_depth/CMakeFiles/sift_img_depth.dir
 /home/yun/vision/vision_depth/CMakeFiles/downscale.dir
 /home/yun/vision/vision_depth/CMakeFiles/match_test.dir
 /home/yun/vision/vision_depth/CMakeFiles/camera_calibration.dir

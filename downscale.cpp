@@ -16,6 +16,7 @@ int main(int argc, char *argv[]){
 	Mat img1 = imread(argv[1]); 
 	pyrDown( img1, img1, Size( img1.cols/2, img1.rows/2 ));
 	pyrDown( img1, img1, Size( img1.cols/2, img1.rows/2 ));
+	pyrDown( img1, img1, Size( img1.cols/2, img1.rows/2 ));
 	string filename = argv[2];
 	imwrite( filename, img1 );
 

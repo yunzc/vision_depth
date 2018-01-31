@@ -150,19 +150,6 @@ test_opencv/fast:
 .PHONY : test_opencv/fast
 
 #=============================================================================
-# Target rules for targets named surf_img_depth
-
-# Build rule for target.
-surf_img_depth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 surf_img_depth
-.PHONY : surf_img_depth
-
-# fast build rule for target.
-surf_img_depth/fast:
-	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/build
-.PHONY : surf_img_depth/fast
-
-#=============================================================================
 # Target rules for targets named feature_match
 
 # Build rule for target.
@@ -174,6 +161,19 @@ feature_match: cmake_check_build_system
 feature_match/fast:
 	$(MAKE) -f CMakeFiles/feature_match.dir/build.make CMakeFiles/feature_match.dir/build
 .PHONY : feature_match/fast
+
+#=============================================================================
+# Target rules for targets named sift_img_depth
+
+# Build rule for target.
+sift_img_depth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sift_img_depth
+.PHONY : sift_img_depth
+
+# fast build rule for target.
+sift_img_depth/fast:
+	$(MAKE) -f CMakeFiles/sift_img_depth.dir/build.make CMakeFiles/sift_img_depth.dir/build
+.PHONY : sift_img_depth/fast
 
 #=============================================================================
 # Target rules for targets named downscale
@@ -376,32 +376,32 @@ match_test.cpp.s:
 	$(MAKE) -f CMakeFiles/match_test.dir/build.make CMakeFiles/match_test.dir/match_test.cpp.s
 .PHONY : match_test.cpp.s
 
-surf_img_depth.o: surf_img_depth.cpp.o
+sift_img_depth.o: sift_img_depth.cpp.o
 
-.PHONY : surf_img_depth.o
+.PHONY : sift_img_depth.o
 
 # target to build an object file
-surf_img_depth.cpp.o:
-	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.o
-.PHONY : surf_img_depth.cpp.o
+sift_img_depth.cpp.o:
+	$(MAKE) -f CMakeFiles/sift_img_depth.dir/build.make CMakeFiles/sift_img_depth.dir/sift_img_depth.cpp.o
+.PHONY : sift_img_depth.cpp.o
 
-surf_img_depth.i: surf_img_depth.cpp.i
+sift_img_depth.i: sift_img_depth.cpp.i
 
-.PHONY : surf_img_depth.i
+.PHONY : sift_img_depth.i
 
 # target to preprocess a source file
-surf_img_depth.cpp.i:
-	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.i
-.PHONY : surf_img_depth.cpp.i
+sift_img_depth.cpp.i:
+	$(MAKE) -f CMakeFiles/sift_img_depth.dir/build.make CMakeFiles/sift_img_depth.dir/sift_img_depth.cpp.i
+.PHONY : sift_img_depth.cpp.i
 
-surf_img_depth.s: surf_img_depth.cpp.s
+sift_img_depth.s: sift_img_depth.cpp.s
 
-.PHONY : surf_img_depth.s
+.PHONY : sift_img_depth.s
 
 # target to generate assembly for a file
-surf_img_depth.cpp.s:
-	$(MAKE) -f CMakeFiles/surf_img_depth.dir/build.make CMakeFiles/surf_img_depth.dir/surf_img_depth.cpp.s
-.PHONY : surf_img_depth.cpp.s
+sift_img_depth.cpp.s:
+	$(MAKE) -f CMakeFiles/sift_img_depth.dir/build.make CMakeFiles/sift_img_depth.dir/sift_img_depth.cpp.s
+.PHONY : sift_img_depth.cpp.s
 
 test_opencv.o: test_opencv.cpp.o
 
@@ -441,8 +441,8 @@ help:
 	@echo "... image_depth"
 	@echo "... image_segmentation"
 	@echo "... test_opencv"
-	@echo "... surf_img_depth"
 	@echo "... feature_match"
+	@echo "... sift_img_depth"
 	@echo "... downscale"
 	@echo "... match_test"
 	@echo "... camera_calibration"
@@ -464,9 +464,9 @@ help:
 	@echo "... match_test.o"
 	@echo "... match_test.i"
 	@echo "... match_test.s"
-	@echo "... surf_img_depth.o"
-	@echo "... surf_img_depth.i"
-	@echo "... surf_img_depth.s"
+	@echo "... sift_img_depth.o"
+	@echo "... sift_img_depth.i"
+	@echo "... sift_img_depth.s"
 	@echo "... test_opencv.o"
 	@echo "... test_opencv.i"
 	@echo "... test_opencv.s"

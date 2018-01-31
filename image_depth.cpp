@@ -22,7 +22,7 @@ void match(Mat& img1, Mat& img2, vector<pair<Point, Point> > &matches){
 	// use a search window to limit search and speed up time
 	// for now it is vertically: 2 window_sizes, horizontally: 3 window sizes 
 	// perform block matching on two images to create disparity map
-	int window_size = 99; // make sure this is odd
+	int window_size = 89; // make sure this is odd
 	int start = (window_size - 1)/2; 
 	// pad image 
 	int orig_cols = img1.cols; int orig_rows = img1.rows; 

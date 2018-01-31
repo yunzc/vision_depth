@@ -1,6 +1,6 @@
 # vision_depth
 
-Project for MIT 6.179 C/C++ class. The goal is to take two images of the same scene and the transforms of the camera from the pose when taking image 1 and the pose when taking image 2 to infer the depth of the scenes. To solutions are provided: one uses SURF to find the depth of a few detected features, the other is quite slow and performs pixel matching to create a depth map of the whole scene. Sample testing on a few opencv features and the code to calibrate the camera for obtaining the camera matrix is included in the package. 
+Project for MIT 6.179 C/C++ class. The goal is to take two images of the same scene and the transforms of the camera from the pose when taking image 1 and the pose when taking image 2 to infer the depth of the scenes. To solutions are provided: one uses SIFT detect and match features, then find the depth of these points; the other is quite slow and performs pixel matching to create a depth map of the whole scene. Sample testing on a few opencv features and the code to calibrate the camera for obtaining the camera matrix is included in the package. 
 
 ## Getting Started 
 
@@ -12,14 +12,24 @@ cmake .
 make
 ```
 
-## Running 
+## Running sift_img_depth (find depth of a few feature points)
 
-For SURF (depth of a few features): 
+For  (depth of a few features): 
 ```
-./process_img <img1> <img2> <translation_x> <translation_z> <angle difference>
+./sift_img_depth <img1> <img2> <translation_x> <translation_z> <angle difference>
 ```
 With included images, to see example, run: 
 ```
-./process_img images/im1.jpg images/im2.jpg -30 0 0
+./sift_img_depth images/im1.jpg images/im2.jpg 10 0 0
 ```
 Note that z is the depth direction (pointing towards scene). System is right handed and the transformation is from image 1 to image 2. 
+
+After running a code, two images should show up: one is the original image (in grayscale), the other is the original with the depth points marked, darker means object is closer to camera, whiter means further away. 
+
+## Note 
+
+Note that in the images directory, imx.jpg are none downscaled images, so make sure the camera_params is calibrated accordingly for these, vice versa for dimx.jpg, the downscaled images. To make sure of calibration, fo to calibration_config.xml and make sure line 19 is set correctly 
+```
+<Input>"images/calib_images.xml"</Input>
+``` 
+It should be either images/calib_images.xml or images/calib_downscale_images.xml
