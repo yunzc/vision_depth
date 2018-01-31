@@ -38,7 +38,7 @@ Note that here we are using the downsampled images, so have to downsample accord
 
 ## Note 
 
-Note that in the images directory, imx.jpg are none downscaled images, so make sure the camera_params is calibrated accordingly for these, vice versa for dimx.jpg, the downscaled images. To make sure of calibration, fo to calibration_config.xml and make sure line 19 is set correctly 
+Note that in the images directory, imx.jpg are none downscaled images, so make sure the camera_params is calibrated accordingly for these, vice versa for dimx.jpg, the downscaled images. To make sure of calibration, go to calibration_config.xml and make sure line 19 is set correctly 
 ```
 <Input>"images/calib_images.xml"</Input>
 ``` 
